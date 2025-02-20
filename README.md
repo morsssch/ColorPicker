@@ -20,3 +20,5 @@ live-server
 - Pure JavaScript, no dependencies
 - Simple and clean UI
 - Basic color selection functionality
+
+![preview](images/preview.png)
