@@ -1,0 +1,198 @@
+input {
+    all: unset;
+    box-sizing: border-box;
+    outline: none;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    all: unset;
+    display: inline;
+    cursor: pointer;
+}
+
+:root {
+    --background-color: red;
+}
+
+.colorful {
+    background: var(--background-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Kanit", serif;
+    font-weight: 300;
+    font-style: normal;
+    height: 100vh;
+    align-items: center;
+    user-select: none;
+}
+
+#colorPicker {
+    display: flex;
+    justify-content: center;
+}
+
+#colorPicker__inner {
+    display: flex;
+    flex-direction: column;
+    padding: 75px 100px;
+    background-color: white;
+    border: 2px #FAFAFA solid;
+    border-radius: 10px;
+    max-height: 575px;
+}
+
+#colorPicker__tool {
+    display: flex;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+#title {
+    font-family: "Major Mono Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 36px;
+}
+
+#nickname {
+    color: #c8c8c8;
+    font-size: 24px;
+    font-weight: 200;
+    transition: ease-in-out 0.2s;
+}
+
+#nickname:hover {
+    color: #555
+}
+
+#palette {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-right: 50px;
+}
+
+#palette__canvas {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
+
+#palette__picker {
+    pointer-events: none;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: -12px;
+    top: -12px;
+}
+
+#palette__picker svg {
+    pointer-events: none;
+}
+
+#hmap {
+    position: relative;
+    width: 54px;
+    height: 500px;
+    margin-right: 50px;
+}
+
+#hmap__canvas {
+    width: 50px;
+    height: 100%;
+}
+
+#hmap__picker {
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    left: -2px;
+}
+
+#hmap__picker svg {
+    pointer-events: none;
+    position: absolute;
+    top: -5px;
+}
+
+.gradient {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.gradient__light {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#ffffff", GradientType=1);
+}
+
+.gradient__dark {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#000000", GradientType=1);
+}
+
+#inputs {
+    height: 500px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input__block {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.input__item {
+    border: 1px #FAFAFA solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    align-items: center;
+}
+
+#hex__item {
+    width: 100%;
+}
+
+.input__item p {
+    width: 100%;
+    text-align: center;
+}
+
+.input {
+    background-color: #FAFAFA;
+    max-width: 100px;
+    padding: 0 5px;
+    height: 100%;
+}

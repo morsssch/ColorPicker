@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorPicker</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Major+Mono+Display&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="colorful">
+    <div id="colorPicker">
+        <div id="colorPicker__inner">
+            <div id="header">
+                <p id="title">ColorPicker</p>
+                <a href="https://t.me/morssssss"><p id="nickname">@morssssss</p></a>
+            </div>
+            <div id="colorPicker__tool">
+                <div id="palette">
+                    <div class="gradient gradient__light"></div>
+                    <div class="gradient gradient__dark"></div>
+                    <div id="palette__canvas"></div>
+                    <div id="palette__picker" style="left: 0px; top: 0px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                            draggable="false">
+                            <circle cx="12" cy="12" r="10" fill="none" stroke="black" stroke-width="2" />
+                            <circle cx="12" cy="12" r="8" fill="none" stroke="white" stroke-width="2" />
+                        </svg>
+                    </div>
+
+                </div>
+                <div id="hmap">
+                    <canvas id="hmap__canvas"></canvas>
+                    <div id="hmap__picker">
+                        <svg width="54" height="15" xmlns="http://www.w3.org/2000/svg" draggable="false">
+                            <rect x="3" y="3" width="48" height="8" rx="4" ry="4" fill="none" stroke="white"
+                                stroke-width="3" />
+                            <rect x="1" y="1" width="52" height="12" rx="5" ry="5" fill="none" stroke="black"
+                                stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+                <div id="inputs">
+                    <div id="hex__item" class="input__item">
+                        <p>HEX</p>
+                        <input type="text" id="hexInput" class="input">
+                    </div>
+                    <div id="hsv__block" class="input__block">
+                        <div id="h__item" class="input__item">
+                            <p>H</p>
+                            <input type="text" id="hHSVInput" class="input">
+                        </div>
+                        <div id="sHSV__item" class="input__item">
+                            <p>S</p>
+                            <input type="text" id="sHSVInput" class="input">
+                        </div>
+                        <div id="v__item" class="input__item">
+                            <p>V</p>
+                            <input type="text" id="vInput" class="input">
+                        </div>
+                    </div>
+                    <div id="hsl__block" class="input__block">
+                        <div id="h__item" class="input__item">
+                            <p>H</p>
+                            <input type="text" id="hHSLInput" class="input">
+                        </div>
+                        <div id="sHSL__item" class="input__item">
+                            <p>S</p>
+                            <input type="text" id="sHSLInput" class="input">
+                        </div>
+                        <div id="l__item" class="input__item">
+                            <p>L</p>
+                            <input type="text" id="lInput" class="input">
+                        </div>
+                    </div>
+                    <div id="rgb__block" class="input__block">
+                        <div id="r__item" class="input__item">
+                            <p>R</p>
+                            <input type="text" id="rInput" class="input">
+                        </div>
+                        <div id="g__item" class="input__item">
+                            <p>G</p>
+                            <input type="text" id="gInput" class="input">
+                        </div>
+                        <div id="b__item" class="input__item">
+                            <p>B</p>
+                            <input type="text" id="bInput" class="input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module" src="script.js"></script>
+<script type="module" src="colorUtils.js"></script>
+
+</html>
