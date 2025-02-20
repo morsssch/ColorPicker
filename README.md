@@ -21,4 +21,5 @@ live-server
 - Simple and clean UI
 - Basic color selection functionality
 
+
 ![preview](images/preview.png)
